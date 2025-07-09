@@ -102,3 +102,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+# 누적 보상 시각화
+plot_cumulative_reward(rewards)
+import numpy as np
+import matplotlib.pyplot as plt
+import streamlit as st
+
+def plot_cumulative_reward(rewards):
+    cumulative_rewards = np.cumsum(rewards)
+
+    fig, ax = plt.subplots(figsize=(6, 4))
+    ax.plot(cumulative_rewards, color='green')
+    ax.set_title("누적 보상 그래프 (Cumulative Reward)")
+    ax.set_xlabel("에피소드")
+    ax.set_ylabel("누적 보상")
+    ax.grid(True)
+    st.pyplot(fig)
+    plt.close(fig)
