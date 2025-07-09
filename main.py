@@ -102,8 +102,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-# 누적 보상 시각화
-plot_cumulative_reward(rewards)
+
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
